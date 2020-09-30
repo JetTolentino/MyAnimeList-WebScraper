@@ -128,7 +128,7 @@ def get_data(genre):
             my_url = f'https://myanimelist.net/anime/genre/{genres_key[genre]}/{genres[genre]}?page={page_string}'
             uClient = uReq(my_url)
             page_html = uClient.read()
-            uClient.close()
+            #uClient.close()
             page_soup = soup(page_html , 'html.parser')  #HTML parser 
             containers = page_soup.findAll('div', {'class': 'seasonal-anime js-seasonal-anime'})
             page += 1
